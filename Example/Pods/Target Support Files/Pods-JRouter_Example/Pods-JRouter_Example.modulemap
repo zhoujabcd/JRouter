@@ -1,0 +1,6 @@
+framework module Pods_JRouter_Example {
+  umbrella header "Pods-JRouter_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
