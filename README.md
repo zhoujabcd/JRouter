@@ -22,13 +22,14 @@ pod 'JRouter'
 ```
 
 ## Use
+
+### Register a routing object
 ```ruby
-//Register a routing object
 [[JRouterManager shareInstance] inject:ViewController.class  url:@"VC"];
 ```
 
+### Start route jump interface：
 ```ruby
-//Start route jump interface
 [[[JRouterManager shareInstance]build:@"VC" parentVC:self]navigation:^(NSString* status, JRouterPostcard* action, NSError* e){
         NSLog(@"navigation status: %@", status);
     }];
@@ -41,9 +42,38 @@ NSString * const ROUTER_ON_INTERRUPT = @"router_on_interrupt";
 */
 ```
 
-
+### Interceptor：
+Create an interceptor class that inherits from the basic interceptor, overrides the interceptor's process method, 
 ```ruby
-//Log enable
+#import <Foundation/Foundation.h>
+#import "JRouterBaseInterceptor.h"
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface ARouterInterceptor : JRouterBaseInterceptor
+
+
+@end
+
+NS_ASSUME_NONNULL_END
+
+-(void)process:(JRouterPostcard *)postcard interceptCallBack:(void(^)(BOOL))interceptCallBack
+{
+//    NSLog(@"intercept status: %@ is processing postcard: %@",self, postcard);
+    [super process:postcard interceptCallBack:interceptCallBack];
+}
+```
+
+instantiates it when it is used
+```ruby
+[[ARouterInterceptor alloc]init:1];
+```
+The priority parameter in the constructor is the interceptor priority
+
+
+
+### Log enable
+```ruby
 [JRouterManager openDebug];
 ```
 
