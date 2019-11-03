@@ -17,8 +17,28 @@ JRouter is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
+source 'https://github.com/zhoujabcd/mySpecs'
 pod 'JRouter'
 ```
+
+## Use
+Register a routing object
+```ruby
+[[JRouterManager shareInstance] inject:ViewController.class  url:@"VC"];
+```
+
+Start route jump interface
+```ruby
+[[[JRouterManager shareInstance]build:@"VC" parentVC:self]navigation:^(NSString* status, JRouterPostcard* action, NSError* e){
+        NSLog(@"navigation status: %@", status);
+    }];
+```
+
+Log enable
+```ruby
+[JRouterManager openDebug];
+```
+
 
 ## Author
 
