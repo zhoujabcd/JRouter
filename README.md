@@ -22,20 +22,28 @@ pod 'JRouter'
 ```
 
 ## Use
-Register a routing object
 ```ruby
+//Register a routing object
 [[JRouterManager shareInstance] inject:ViewController.class  url:@"VC"];
 ```
 
-Start route jump interface
 ```ruby
+//Start route jump interface
 [[[JRouterManager shareInstance]build:@"VC" parentVC:self]navigation:^(NSString* status, JRouterPostcard* action, NSError* e){
         NSLog(@"navigation status: %@", status);
     }];
+
+/*Status:
+NSString * const ROUTER_ON_FOUND = @"router_on_found";
+NSString * const ROUTER_ON_ARRIVAL = @"router_on_arrival";
+NSString * const ROUTER_ON_LOST = @"router_on_lost";
+NSString * const ROUTER_ON_INTERRUPT = @"router_on_interrupt";
+*/
 ```
 
-Log enable
+
 ```ruby
+//Log enable
 [JRouterManager openDebug];
 ```
 
