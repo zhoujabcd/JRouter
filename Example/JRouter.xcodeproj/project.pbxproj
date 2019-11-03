@@ -37,9 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		033B7DAA5A33B3FF16C556C2 /* JRouter.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = JRouter.podspec; path = ../JRouter.podspec; sourceTree = "<group>"; };
+		033B7DAA5A33B3FF16C556C2 /* JRouter.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JRouter.podspec; path = ../JRouter.podspec; sourceTree = "<group>"; };
 		0526ED61D951462C078D19D6 /* Pods-JRouter_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JRouter_Tests.debug.xcconfig"; path = "Target Support Files/Pods-JRouter_Tests/Pods-JRouter_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		1EAEDC118DA028B70D8028D1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		1EAEDC118DA028B70D8028D1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		1F80DA5F4589F71CF3FD1194 /* Pods_JRouter_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JRouter_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		218919935A1967FA39B89058 /* Pods-JRouter_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JRouter_Tests.release.xcconfig"; path = "Target Support Files/Pods-JRouter_Tests/Pods-JRouter_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* JRouter_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JRouter_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,7 +66,7 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ABD22C2E236A6FAF7D4B1EC5 /* Pods_JRouter_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JRouter_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A4305B9F5FB7E92E113D95 /* Pods-JRouter_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JRouter_Example.debug.xcconfig"; path = "Target Support Files/Pods-JRouter_Example/Pods-JRouter_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		EA78C3D24D05FBC284FA807B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		EA78C3D24D05FBC284FA807B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +103,6 @@
 				0526ED61D951462C078D19D6 /* Pods-JRouter_Tests.debug.xcconfig */,
 				218919935A1967FA39B89058 /* Pods-JRouter_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -249,6 +248,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = zhoujabcd;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 369UKJKGSE;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -259,6 +261,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -519,6 +522,7 @@
 			baseConfigurationReference = C7A4305B9F5FB7E92E113D95 /* Pods-JRouter_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 369UKJKGSE;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JRouter/JRouter-Prefix.pch";
 				INFOPLIST_FILE = "JRouter/JRouter-Info.plist";
@@ -535,6 +539,7 @@
 			baseConfigurationReference = 859F899C6378941D53FF1595 /* Pods-JRouter_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 369UKJKGSE;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JRouter/JRouter-Prefix.pch";
 				INFOPLIST_FILE = "JRouter/JRouter-Info.plist";

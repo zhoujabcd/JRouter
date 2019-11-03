@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "JRouterManager.h"
-#import "JRouterAction.h"
 #import "JRouterPostcard.h"
 #import "JRouterInterceptorManager.h"
 
