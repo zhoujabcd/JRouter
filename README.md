@@ -87,9 +87,11 @@ instantiates it when it is used，the priority parameter in the constructor is t
     
     interceptCallBack(NO);
 }
+
+//interceptCallBack(NO);No interception
+//interceptCallBack(YES);Interception
 ```
-interceptCallBack(NO);//No interception
-interceptCallBack(YES);//Interception
+
 
 ### Log enable
 ```ruby
