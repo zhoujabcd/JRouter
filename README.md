@@ -46,7 +46,7 @@ NSString * const ROUTER_ON_INTERRUPT = @"router_on_interrupt";
 ```ruby
 NSDictionary* dic = [NSDictionary dictionaryWithObjectsAndKeys:@"hello word",@"key", nil];
     
-    [[[[JRouterManager shareInstance]build:@"VC" parentVC:self]withValues:dic] navigation:^(NSString* status, JRouterPostcard* action, NSError* e){
+[[[[JRouterManager shareInstance]build:@"VC" parentVC:self]withValues:dic] navigation:^(NSString* status, JRouterPostcard* action, NSError* e){
         NSLog(@"navigation status: %@", status);
     }];
 ```
@@ -74,13 +74,22 @@ NS_ASSUME_NONNULL_END
 }
 ```
 
-instantiates it when it is used
+instantiates it when it is used，the priority parameter in the constructor is the interceptor priority
 ```ruby
 [[ARouterInterceptor alloc]init:1];
 ```
-The priority parameter in the constructor is the interceptor priority
-
-
+#### Does the interceptor intercept this route：
+```ruby
+-(void)process:(JRouterPostcard *)postcard interceptCallBack:(void(^)(BOOL))interceptCallBack
+{
+//    NSLog(@"intercept status: %@ is processing postcard: %@",self, postcard);
+    [super process:postcard interceptCallBack:interceptCallBack];
+    
+    interceptCallBack(NO);
+}
+```
+interceptCallBack(NO);//No interception
+interceptCallBack(YES);//Interception
 
 ### Log enable
 ```ruby
