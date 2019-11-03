@@ -16,7 +16,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 JRouter is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
-```ObjC
+```ruby
 source 'https://github.com/zhoujabcd/mySpecs'
 pod 'JRouter'
 ```
@@ -41,6 +41,16 @@ NSString * const ROUTER_ON_LOST = @"router_on_lost";
 NSString * const ROUTER_ON_INTERRUPT = @"router_on_interrupt";
 */
 ```
+
+### Start route jump interface with params：
+```ruby
+NSDictionary* dic = [NSDictionary dictionaryWithObjectsAndKeys:@"hello word",@"key", nil];
+    
+    [[[[JRouterManager shareInstance]build:@"VC" parentVC:self]withValues:dic] navigation:^(NSString* status, JRouterPostcard* action, NSError* e){
+        NSLog(@"navigation status: %@", status);
+    }];
+```
+
 
 ### Interceptor：
 Create an interceptor class that inherits from the basic interceptor, overrides the interceptor's process method, 
