@@ -1,9 +1,10 @@
 use_frameworks!
 
-platform :ios, '8.0'
+platform :ios, '10.0'
 
 target 'JRouter_Example' do
-  pod 'JRouter', :path => '../'
+  #pod 'JRouter', :path => '../'
+	pod 'JRouter', :podspec => '../JRouter.podspec'
 
   target 'JRouter_Tests' do
     inherit! :search_paths

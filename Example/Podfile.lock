@@ -9,14 +9,14 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - JRouter (0.1.0)
+  - JRouter (0.1.1)
   - Specta (1.0.7)
 
 DEPENDENCIES:
   - Expecta
   - "Expecta+Snapshots"
   - FBSnapshotTestCase
-  - JRouter (from `../`)
+  - JRouter (from `../JRouter.podspec`)
   - Specta
 
 SPEC REPOS:
@@ -28,15 +28,15 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   JRouter:
-    :path: "../"
+    :podspec: "../JRouter.podspec"
 
 SPEC CHECKSUMS:
   Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
   "Expecta+Snapshots": dcff217eef506dabd6dfdc7864ea2da321fafbb8
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  JRouter: e7f35338a40a38eaab576c1071cd6364e4d59f9c
+  JRouter: 76d6e8b575a4f4b79ee0657891ad00093863870e
   Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
 
-PODFILE CHECKSUM: a739ccc3219c8a78711f164ebaa0005188932a51
+PODFILE CHECKSUM: d64e87415228fbb542e0e9634ae2c23b3e0ba0bb
 
 COCOAPODS: 1.8.4

@@ -24,6 +24,11 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		81FD86147E3721E2BCC93AB7 /* Pods_JRouter_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABD22C2E236A6FAF7D4B1EC5 /* Pods_JRouter_Example.framework */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		D0C9692E23AE5D8E001FE3AB /* JRouterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C9692423AE5D8D001FE3AB /* JRouterManager.m */; };
+		D0C9692F23AE5D8E001FE3AB /* JRouterPostcard.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C9692523AE5D8D001FE3AB /* JRouterPostcard.m */; };
+		D0C9693023AE5D8E001FE3AB /* JRouterInterceptorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C9692623AE5D8D001FE3AB /* JRouterInterceptorManager.m */; };
+		D0C9693123AE5D8E001FE3AB /* JRouterBaseInterceptor.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C9692723AE5D8E001FE3AB /* JRouterBaseInterceptor.m */; };
+		D0C9693223AE5D8E001FE3AB /* JRouterCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C9692A23AE5D8E001FE3AB /* JRouterCommon.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +71,17 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ABD22C2E236A6FAF7D4B1EC5 /* Pods_JRouter_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JRouter_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A4305B9F5FB7E92E113D95 /* Pods-JRouter_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JRouter_Example.debug.xcconfig"; path = "Target Support Files/Pods-JRouter_Example/Pods-JRouter_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		D0C9692323AE5D8D001FE3AB /* JRouterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRouterManager.h; sourceTree = "<group>"; };
+		D0C9692423AE5D8D001FE3AB /* JRouterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRouterManager.m; sourceTree = "<group>"; };
+		D0C9692523AE5D8D001FE3AB /* JRouterPostcard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRouterPostcard.m; sourceTree = "<group>"; };
+		D0C9692623AE5D8D001FE3AB /* JRouterInterceptorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRouterInterceptorManager.m; sourceTree = "<group>"; };
+		D0C9692723AE5D8E001FE3AB /* JRouterBaseInterceptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRouterBaseInterceptor.m; sourceTree = "<group>"; };
+		D0C9692823AE5D8E001FE3AB /* JRouterPostcard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRouterPostcard.h; sourceTree = "<group>"; };
+		D0C9692923AE5D8E001FE3AB /* JRouterCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRouterCommon.h; sourceTree = "<group>"; };
+		D0C9692A23AE5D8E001FE3AB /* JRouterCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRouterCommon.m; sourceTree = "<group>"; };
+		D0C9692B23AE5D8E001FE3AB /* JRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRouter.h; sourceTree = "<group>"; };
+		D0C9692C23AE5D8E001FE3AB /* JRouterInterceptorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRouterInterceptorManager.h; sourceTree = "<group>"; };
+		D0C9692D23AE5D8E001FE3AB /* JRouterBaseInterceptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRouterBaseInterceptor.h; sourceTree = "<group>"; };
 		EA78C3D24D05FBC284FA807B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,6 +159,7 @@
 		6003F593195388D20070C39A /* Example for JRouter */ = {
 			isa = PBXGroup;
 			children = (
+				D0C9692223AE5D66001FE3AB /* Class */,
 				6003F59C195388D20070C39A /* JAppDelegate.h */,
 				6003F59D195388D20070C39A /* JAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -194,6 +211,24 @@
 				1EAEDC118DA028B70D8028D1 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		D0C9692223AE5D66001FE3AB /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				D0C9692B23AE5D8E001FE3AB /* JRouter.h */,
+				D0C9692D23AE5D8E001FE3AB /* JRouterBaseInterceptor.h */,
+				D0C9692723AE5D8E001FE3AB /* JRouterBaseInterceptor.m */,
+				D0C9692923AE5D8E001FE3AB /* JRouterCommon.h */,
+				D0C9692A23AE5D8E001FE3AB /* JRouterCommon.m */,
+				D0C9692C23AE5D8E001FE3AB /* JRouterInterceptorManager.h */,
+				D0C9692623AE5D8D001FE3AB /* JRouterInterceptorManager.m */,
+				D0C9692323AE5D8D001FE3AB /* JRouterManager.h */,
+				D0C9692423AE5D8D001FE3AB /* JRouterManager.m */,
+				D0C9692823AE5D8E001FE3AB /* JRouterPostcard.h */,
+				D0C9692523AE5D8D001FE3AB /* JRouterPostcard.m */,
+			);
+			path = Class;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,8 +428,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* JAppDelegate.m in Sources */,
+				D0C9692F23AE5D8E001FE3AB /* JRouterPostcard.m in Sources */,
+				D0C9692E23AE5D8E001FE3AB /* JRouterManager.m in Sources */,
 				6003F5A7195388D20070C39A /* JViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				D0C9693123AE5D8E001FE3AB /* JRouterBaseInterceptor.m in Sources */,
+				D0C9693223AE5D8E001FE3AB /* JRouterCommon.m in Sources */,
+				D0C9693023AE5D8E001FE3AB /* JRouterInterceptorManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

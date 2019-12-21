@@ -15,9 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic,assign)NSInteger priority;
 
--(instancetype)init:(NSInteger)priority NS_DESIGNATED_INITIALIZER;
-
--(instancetype)init NS_UNAVAILABLE;
+-(instancetype)init:(NSInteger)priority;
 
 -(void)process:(JRouterPostcard *)postcard interceptCallBack:(void(^)(BOOL))interceptCallBack;
 

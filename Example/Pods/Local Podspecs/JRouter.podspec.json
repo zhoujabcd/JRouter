@@ -1,6 +1,6 @@
 {
   "name": "JRouter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "This is a routing framework.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/zhoujabcd/JRouter",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/zhoujabcd/JRouter.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "platforms": {
     "ios": "10.0"

@@ -16,12 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 +(instancetype)shareInstance;
 
-@property (nonatomic,copy) NSArray * interceptorList;
+@property (nonatomic,copy) NSMutableArray * interceptorList;
 
-- (instancetype)init NS_DESIGNATED_INITIALIZER;
-
+- (instancetype)init;
 -(void)addToList:(JRouterBaseInterceptor *) interceptor;
-
 -(void)doIntercept:(JRouterPostcard *)postcard  interceptCallBack:(void(^)(BOOL))interceptCallBack;
 
 @end

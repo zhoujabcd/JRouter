@@ -10,16 +10,6 @@
 #import "JRouterCommon.h"
 
 @implementation JRouterInterceptorManager
-{
-    NSLock *_lock;
-}
-
-- (void)dealloc
-{
-    _interceptorList = nil;
-    
-    _lock = nil;
-}
 
 +(instancetype)shareInstance{
     static JRouterInterceptorManager *p = nil;
@@ -36,9 +26,7 @@
 {
     self = [super init];
     if (self) {
-        _interceptorList = [[NSArray alloc]init];
-        
-        _lock = [[NSLock alloc]init];
+        _interceptorList = [[NSMutableArray alloc]init];
     }
     return self;
 }
@@ -63,11 +51,7 @@
         }
     }
     
-    [_lock lock];
-    NSMutableArray *mArr = [[NSMutableArray alloc]initWithArray:_interceptorList];
-    [mArr insertObject:interceptor atIndex:insertIndex];
-    _interceptorList = mArr;
-    [_lock unlock];
+    [_interceptorList insertObject:interceptor atIndex:insertIndex];
     
     if(IS_DEBUG)
     {

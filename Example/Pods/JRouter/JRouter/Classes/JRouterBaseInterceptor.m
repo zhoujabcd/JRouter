@@ -11,11 +11,6 @@
 #import "JRouterCommon.h"
 
 @implementation JRouterBaseInterceptor
-
-- (void)dealloc
-{
-}
-
 - (instancetype)init:(NSInteger)priority
 {
     self = [super init];

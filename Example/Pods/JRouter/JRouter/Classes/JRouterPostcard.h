@@ -18,15 +18,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,weak)UIViewController* parentVC;
 @property(nonatomic,strong)id obj;
 @property(nonatomic,copy)NSDictionary* values;
-@property(nonatomic,assign)BOOL isAnimation;
 
 -(instancetype)initWithPath:(NSString*) path parentVC:(UIViewController *) parentVC;
 
 -(void)navigation:(void(^)(NSString*, JRouterPostcard*, NSError*) )navigationCallBack;
 
 -(instancetype)withValues:(NSDictionary*)values;
-
--(instancetype)withAnimation:(BOOL)animation;
 
 @end
 

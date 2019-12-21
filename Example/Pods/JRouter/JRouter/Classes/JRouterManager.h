@@ -16,24 +16,17 @@ NS_ASSUME_NONNULL_BEGIN
 {
 }
 
-@property (nonatomic, copy)NSDictionary* map;
+@property (nonatomic, copy)NSMutableDictionary* map;
 
 @property (nonatomic, strong)dispatch_queue_t queue;
 
-@property (nonatomic, copy)NSDictionary *cardMap;
-
 +(instancetype)shareInstance;
-
 +(void)openDebug;
 
 
 -(void)inject:(Class)viewClass url:(NSString *)url;
 
 -(JRouterPostcard *)build:(NSString*)path parentVC:(UIViewController *)parentVC;
-
--(JRouterPostcard *)build:(NSString*)path parentVC:(UIViewController *)parentVC cashed:(BOOL)cashed;
-
--(void)removePostCard:(NSString *)path;
 
 @end
 
